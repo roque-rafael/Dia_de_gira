@@ -1,0 +1,127 @@
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #222;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* CONTAINER PRINCIPAL */
+.main {
+    width: 100%;
+    max-width: 480px;
+    padding: 15px;
+    color: white;
+}
+
+/* TÍTULO */
+h1 {
+    color: blueviolet;
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 30px 0 20px;
+}
+
+/* LOGO DO TEMPLO - FORÇA TAMANHO PEQUENO */
+.logo img,
+img[alt*="Templo"],
+img[alt*="Maria Quitéria"] {
+    max-width: 90px !important;
+    width: 90px !important;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* CAIXA PRINCIPAL */
+.gira {
+    background: rgba(0,0,0,0.7);
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+/* BLOCOS ESQUERDA E DIREITA */
+#esq, #dir {
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BOTÕES GRANDES (Hoje é dia de...) */
+.gira a {
+    display: block;
+    background: blueviolet;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;        /* ← controla o tamanho dos bot vortar também se precisar */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* IMAGENS DAS GIRAS */
+.imagem,
+.imggira {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+    margin: 15px auto;
+    display: block;
+}
+
+/* BOTÃO VOLTAR (se existir) */
+#volta,
+a[href*="voltar"],
+.botao-voltar {
+    max-width: 100px !important;
+    padding: 10px 16px !important;
+    font-size: 0.95rem;
+    margin: 30px auto 10px;
+    display: block;
+}
+
+/* RESPONSIVO */
+@media (min-width: 768px) {
+    .gira {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    #esq, #dir {
+        max-width: 360px;
+    }
+    
+    .gira a {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.9rem; }
+    .gira a { max-width: 260px; font-size: 1rem; }
+    .logo img { max-width: 75px !important; }
+}
