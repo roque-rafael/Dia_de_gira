@@ -122,6 +122,8 @@ img[alt*="Maria Quitéria"] {
     .gira a { max-width: 260px; font-size: 1rem; margin-left: -20px; }
     .logo img { max-width: 75px !important; }
     .imggira { }
+    #card { margin-left: -10px;}
+    
 }
 =======
 /* RESET E BASE */
@@ -168,6 +170,7 @@ a {
     color: aliceblue;
     padding: 10px 16px;
     margin-bottom: 10px;
+    margin-top: 20px;
     background-color: blueviolet;
     border-radius: 10px;
     text-decoration: none;
