@@ -94,14 +94,9 @@ img[alt*="Maria Quitéria"] {
 }
 
 /* BOTÃO VOLTAR (se existir) */
-#volta,
-a[href*="voltar"],
-.botao-voltar {
-    max-width: 100px !important;
-    padding: 10px 16px !important;
-    font-size: 0.95rem;
-    margin: 30px auto 10px;
-    display: block;
+#volta {
+    padding: 20px;
+    margin-top: 30px;
 }
 
 /* RESPONSIVO */
@@ -122,9 +117,11 @@ a[href*="voltar"],
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 1.9rem; }
-    .gira a { max-width: 260px; font-size: 1rem; }
+    .audioplay { margin-left: 100px ;} 
+    h1 { font-size: 1.9rem; justify-content: center; }
+    .gira a { max-width: 260px; font-size: 1rem; margin-left: -20px; }
     .logo img { max-width: 75px !important; }
+    .imggira { }
 }
 =======
 /* RESET E BASE */
@@ -145,6 +142,8 @@ html, body {
 
 /* CONTAINER PRINCIPAL */
 .main {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 450px; /* tamanho ideal pra celular */
     padding: 10px;
@@ -173,12 +172,13 @@ a {
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
-    display: inline-block;
+    
 }
 
 /* CAIXA PRINCIPAL */
 .gira {
     display: flex;
+    margin-left:-20px ;
     flex-wrap: wrap;  /* ISSO É O QUE TORNA RESPONSIVO */
     gap: 16px;
     border-radius: 20px;
